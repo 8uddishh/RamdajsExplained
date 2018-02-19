@@ -14,6 +14,7 @@ let chain = f => arr => {
     return arr.map(f)
 }
 
+// vanilla js -- what is compose K
 let composeK = (f, g, h) => x => {
     //from right first method should return array
     let y = h(x)
@@ -24,4 +25,5 @@ let composeK = (f, g, h) => x => {
 }
 
 console.log(composeK(toUpper, getProp('state'), getProp('addressHistory'))(user))
+// using ramda
 console.log(R.composeK(toUpper, getProp('state'), getProp('addressHistory'))(user))

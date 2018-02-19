@@ -1,13 +1,13 @@
 let R = require('ramda')
 
 
-// using vanilla js
 let square = x => x*x
 let double = x => 2*x
 let incr = x => x + 1
 
-let compose = (f, g, h) => x => f(g(h(x)))
 
+// using vanilla js -- What is compose
+let compose = (f, g, h) => x => f(g(h(x)))
 console.log('Composed output', compose(square, incr, double)(10))
 
 // Using Ramda
